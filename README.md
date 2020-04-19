@@ -32,3 +32,17 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
+* ## messageテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|image|string|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+- belongs_to :image
+
+
