@@ -32,7 +32,7 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
-* ## messageテーブル
+* ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -44,5 +44,14 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 - belongs_to :image
+
+* ## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|group|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
 
 
