@@ -38,7 +38,9 @@ Things you may want to cover:
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|image|string||
+|text|text|null: false, foreign_key: true|
+
 
 ### Association
 - belongs_to :group
@@ -53,7 +55,7 @@ Things you may want to cover:
 |group|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
+- has_many :groups
 
 * ## groupsテーブル
 
