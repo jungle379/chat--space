@@ -38,7 +38,8 @@ Things you may want to cover:
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
-|text|text|null: false, foreign_key: true|
+|image|string|
+|text|text|
 
 
 ### Association
@@ -50,20 +51,23 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|references|null: false, foreign_key: true|
+|name|references|null: false|
 
 ### Association
 - has_many :groups, through: :groups_users
-- belongs_to :message
-- belongs_to :groups_users
+- has_many :messages
+- has_many :groups_users
 
 
 * ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|references|null: false, foreign_key: true|
+|name|references|null: false|
 
 
 ### Association
-- belongs_to :group_name
+- has_many :group_users
+- has_many :users, through: :group_users
+- has_many :messages
+
