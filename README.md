@@ -38,33 +38,32 @@ Things you may want to cover:
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
-|image|string||
 |text|text|null: false, foreign_key: true|
 
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-- belongs_to :image
 
 
 * ## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group|references|null: false, foreign_key: true|
+|user_name|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups, through: :groups_users
+- belongs_to :message
+- belongs_to :groups_users
+
 
 * ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user|references|null: false, foreign_key: true|
-|message|references|null: false, foreign_key: true|
+|group_name|references|null: false, foreign_key: true|
 
 
 ### Association
-- belongs_to :user
-- belongs_to :message
+- belongs_to :group_name
