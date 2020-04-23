@@ -51,7 +51,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|references|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :groups, through: :groups_users
@@ -63,7 +63,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|references|null: false|
+|name|string|null: false|
 
 
 ### Association
