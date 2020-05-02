@@ -1,18 +1,15 @@
 .side-var
  .side-var__user-name
+  = current_user.name
   .top-items
    .top-items__name
-    masa
    .top-items__icons
     .top-items__icons__new__users
-    =link_to "#" do
+    = link_to "#" do
      = icon('fa', 'edit')
-
     .top-items__icons__edit__users
-    =link_to "#" do
+    = link_to edit_user_path(current_user) do
      = icon('fa', 'cog') 
-
-   
 
  .side-var__group-list
   .side-var__list
