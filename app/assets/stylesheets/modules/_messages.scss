@@ -141,7 +141,7 @@
  width: 100%;
 }
 
-.form-left__input-form {
+.input-form {
  height: 50px;
  width: 100%;
  padding: 0 40px 0 10px;
@@ -190,4 +190,8 @@
 
 .side-var__message-list {
   font-size: 11px;
+}
+
+.hidden {
+  display: none;
 }
