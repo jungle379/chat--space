@@ -56,8 +56,8 @@ $('#new_message').on('submit', function(e){
     $('.messages').append(html);
     $('form')[0].reset();
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
- })
- })
+   })
+  })
  });
 
 .fail(function() {
