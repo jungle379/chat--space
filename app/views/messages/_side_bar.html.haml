@@ -1,21 +1,22 @@
 .side-var
- .side-var__user-name
-  = current_user.name
+ .side-var__topics
+  .side-var__box
+   .side-var__name
+    = current_user.name
   .top-items
-   .top-items__name
    .top-items__icons
     .top-items__icons__new__users
-    = link_to new_group_path do
-     = icon('fa', 'edit')
+     = link_to new_group_path do
+      = icon('fa', 'edit')
     .top-items__icons__edit__users
-    = link_to edit_user_path(current_user) do
-     = icon('fa', 'cog') 
+     = link_to edit_user_path(current_user) do
+      = icon('fa', 'cog') 
 
- .side-var__group-list
+ .groups
   - current_user.groups.each do |group|
-   .side-var__list
    = link_to group_messages_path(group) do
-    .side-var__group-name
-     = group.name
-    .side-var__message-list
-     = group.show_last_message
+    .group
+     %p.side-var__group-name
+      = group.name
+     %p.side-var__message-list
+      = group.show_last_message
