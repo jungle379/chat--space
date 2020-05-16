@@ -57,6 +57,7 @@
 
 .side-var a {
   color: white;
+  text-decoration: none;
   text-decoration-line:none ;
 }
 
@@ -99,6 +100,10 @@
     right: 40px;
     border: solid 1px #38aef0;
     position: absolute;
+  }
+  &__edit-box a {
+    text-decoration: none;
+    text-decoration-line:none ;
   }
 }
 
