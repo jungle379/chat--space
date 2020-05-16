@@ -53,11 +53,12 @@
   background-color: #2f3a51;
   padding: 20px 20px 0;
   overflow: scroll;
-  text-decoration: none;
 }
 
 .side-var a {
   color: white;
+  text-decoration: none;
+  text-decoration-line:none ;
 }
 
 .group {
@@ -100,7 +101,16 @@
     border: solid 1px #38aef0;
     position: absolute;
   }
+  &__edit-box a {
+    text-decoration: none;
+    text-decoration-line:none ;
+  }
 }
+
+  .edit__btn {
+    color: #38aef0;
+  }
+
   .messages {
    height: calc(100vh - 190px);
    padding: 46px 40px;
