@@ -57,6 +57,7 @@
 
 .side-var a {
   color: white;
+  text-decoration-line:none ;
 }
 
 .group {
@@ -100,6 +101,13 @@
     position: absolute;
   }
 }
+
+  .edit__btn {
+    text-decoration: none;
+    text-decoration-line:none ;
+    color: #38aef0;
+  }
+
   .messages {
    height: calc(100vh - 190px);
    padding: 46px 40px;
