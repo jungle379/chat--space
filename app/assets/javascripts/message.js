@@ -41,6 +41,7 @@ $(function(){
         return html;
       };
     }
+
 $('#new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
@@ -59,7 +60,7 @@ $('#new_message').on('submit', function(e){
     $('form')[0].reset();
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
    })
-   
+
    .fail(function() {
      alert("メッセージ送信に失敗しました");
     });
@@ -79,6 +80,7 @@ $('#new_message').on('submit', function(e){
       //dataオプションでリクエストに値を含める
       data: {id: last_message_id}
     })
+
     .done(function(messages) {
       if (messages.length !== 0) {
         //追加するHTMLの入れ物を作る
@@ -92,10 +94,12 @@ $('#new_message').on('submit', function(e){
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       }
     })
+    
     .fail(function() {
       alert('error');
     });
   };
+
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
