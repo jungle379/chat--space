@@ -59,11 +59,12 @@ $('#new_message').on('submit', function(e){
     $('form')[0].reset();
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
    })
+   
+   .fail(function() {
+     alert("メッセージ送信に失敗しました");
+    });
   })
 
-  .fail(function() {
-    alert("メッセージ送信に失敗しました");
-   });
 
    var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
